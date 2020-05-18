@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Incluir iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.css"
+        integrity="sha256-IQnSeew8zCA+RvM5fNRro/UY0Aib18qU2WBwGOHZOP0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./m1-index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h3 class="header">Formulario </h3>
+            <a href="m1-index.html"><i class="material-icons right ml-auto">house</i></a>
+
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Autocompletar (<code>class="autocomplete"</code>) example: Google</h3>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">textsms</i>
+                            <input type="text" id="autocomplete-input" class="autocomplete" />
+                            <label for="autocomplete-input">Autocomplete ... </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Checkbox </h3>
+                    <form action="#">
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Red</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" checked="checked" />
+                                <span>Yellow (<code>checked="checked"</code>)</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" />
+                                <span>Filled in (<code>class="filled-in"</code>)</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input id="indeterminate-checkbox" type="checkbox" />
+                                <span>Indeterminate Style</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" checked="checked" disabled="disabled" />
+                                <span>Green</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" disabled="disabled" />
+                                <span>Brown</span>
+                            </label>
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Chips (<code>class="chip"</code>)</h3>
+                    <div class="chip">
+                        <img src="http://placehold.it/100x100" alt="Contact Person">
+                        Jane Doe
+                        <i class="close material-icons">close</i>
+                    </div>
+
+                    <div class="chip">
+                        Tag
+                        <i class="close material-icons">close</i>
+                    </div>
+
+                    <!-- Default with no input (automatically generated)  -->
+                    <div class="chips"></div>
+                    <div class="chips chips-initial"></div>
+                    <div class="chips chips-placeholder"></div>
+                    <div class="chips chips-autocomplete"></div>
+
+                    <!-- Customizable input  -->
+                    <div class="chips">
+                        <input class="custom-class">
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Pickers (Datepicker) </h3>
+                    <input type="text" class="datepicker">
+                    <h3 class="subheader">Pickers (Timepicker) </h3>
+                    <input type="text" class="timepicker">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Radio Buttons</h3>
+                    <form action="#">
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" checked />
+                                <span>Red <code>checked</code></span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span>Yellow</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>Green <code>class="with-gap"</code></span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" disabled="disabled" />
+                                <span>Brown <code>disabled="disabled"</code></span>
+                            </label>
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Range</h3>
+                    <div id="test-slider"></div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Select</h3>
+
+                    <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Materialize Select</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <select multiple>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Materialize Multiple Select</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <select>
+                            <optgroup label="team 1">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </optgroup>
+                            <optgroup label="team 2">
+                                <option value="3">Option 3</option>
+                                <option value="4">Option 4</option>
+                            </optgroup>
+                        </select>
+                        <label>Optgroups</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <select class="icons">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="" data-icon="http://placehold.it/100x100">example 1</option>
+                            <option value="" data-icon="http://placehold.it/100x100">example 2</option>
+                            <option value="" data-icon="http://placehold.it/100x100">example 3</option>
+                        </select>
+                        <label>Images in select</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <select class="icons">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="" data-icon="http://placehold.it/100x100" class="left">example 1</option>
+                            <option value="" data-icon="http://placehold.it/100x100" class="left">example 2</option>
+                            <option value="" data-icon="http://placehold.it/100x100" class="left">example 3</option>
+                        </select>
+                        <label>Images in select</label>
+                    </div>
+
+                    <label>Browser Select</label>
+                    <select class="browser-default">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Switches</h3>
+
+                    <!-- Switch -->
+                    <div class="switch">
+                        <label>
+                            Off
+                            <input type="checkbox">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+
+                    <!-- Disabled Switch -->
+                    <div class="switch">
+                        <label>
+                            Off
+                            <input disabled type="checkbox">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Text Inputs</h3>
+
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input disabled value="I am not editable" id="disabled" type="text"
+                                        class="validate">
+                                    <label for="disabled">Disabled</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="password" type="password" class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    This is an inline input field:
+                                    <div class="input-field inline">
+                                        <input id="email_inline" type="email" class="validate">
+                                        <label for="email_inline">Email</label>
+                                        <span class="helper-text" data-error="wrong" data-success="right">Helper
+                                            text</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="icon_prefix" type="text" class="validate">
+                                    <label for="icon_prefix">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="icon_telephone" type="tel" class="validate">
+                                    <label for="icon_telephone">Telephone</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="input_text" type="text" data-length="10">
+                                    <label for="input_text">Input text</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                                    <label for="textarea2">Textarea</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="subheader">Files</h3>
+
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" multiple>
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+    </main>
+
+    <script src="./15-m1-forms.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- noUiSlider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.js"
+        integrity="sha256-1ubcV7PzqcMhAz7jsoU3QlAfCnUaY7SUffeHa4Nq3ws=" crossorigin="anonymous"></script>
+</body>
+
+</html>
